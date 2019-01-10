@@ -23,13 +23,9 @@ import org.springframework.data.gemfire.config.annotation.CacheServerApplication
 import org.springframework.data.gemfire.config.annotation.EnableLocator;
 import org.springframework.data.gemfire.config.annotation.EnableManager;
 import org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession;
-import org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration;
 
 @CacheServerApplication
-@EnableGemFireHttpSession(
-        regionName = "Sessions",
-        sessionSerializerBeanName = GemFireHttpSessionConfiguration.SESSION_DATA_SERIALIZER_BEAN_NAME
-)
+@EnableGemFireHttpSession(regionName = "Sessions")
 @EnableLocator
 @EnableManager(start = true)
 public class SpringBootGemfireApplication {
