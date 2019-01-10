@@ -22,11 +22,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.data.gemfire.config.annotation.CacheServerApplication;
 import org.springframework.data.gemfire.config.annotation.EnableLocator;
 import org.springframework.data.gemfire.config.annotation.EnableManager;
+import org.springframework.data.gemfire.config.annotation.EnablePdx;
 import org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession;
 
 @CacheServerApplication
 @EnableGemFireHttpSession(regionName = "Sessions")
 @EnableLocator
+@EnablePdx(readSerialized = true)
 @EnableManager(start = true)
 public class SpringBootGemfireApplication {
 
