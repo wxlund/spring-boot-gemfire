@@ -23,3 +23,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+*locator10334view.dat
+*locator10334view.log
