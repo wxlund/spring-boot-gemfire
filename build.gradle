@@ -6,25 +6,24 @@ version = '0.0.1-SNAPSHOT'
 
 description = """spring-boot-gemfire"""
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 tasks.withType(JavaCompile) {
-	options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8'
 }
 
 
 
 repositories {
-        
-     maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "http://repo.maven.apache.org/maven2" }
 }
 dependencies {
-    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.1.1.RELEASE') {
-exclude(module: 'spring-boot-starter-logging')
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.1.RELEASE') {
+        exclude(module: 'spring-boot-starter-logging')
     }
-    compile group: 'org.springframework.session', name: 'spring-session-data-geode', version:'2.1.1.RELEASE'
-    compile group: 'org.springframework.shell', name: 'spring-shell', version:'1.2.0.RELEASE'
-    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.1.1.RELEASE') {
-exclude(module: 'spring-boot-starter-logging')
+    compile group: 'org.springframework.session', name: 'spring-session-data-geode', version: '2.1.1.RELEASE'
+    compile group: 'org.springframework.shell', name: 'spring-shell', version: '1.2.0.RELEASE'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.1.RELEASE') {
+        exclude(module: 'spring-boot-starter-logging')
     }
 }
